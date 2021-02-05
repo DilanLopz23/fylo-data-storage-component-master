@@ -1,0 +1,234 @@
+.attribution {
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+}
+
+.attribution a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.attribution a:hover {
+    border-bottom: #fff solid 1px;
+}
+/*Body background */
+body {
+    background-image: url(../images/bg-desktop.png);
+    background-repeat: no-repeat;
+    background-color: hsl(229, 57%, 11%);
+    font-family: 'Raleway', sans-serif;
+    background-position: 50% 125%;
+}
+/*CONTAINER OF ALL THE ELEMENTS*/
+.full-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+/*FLEX CONTAINER*/
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*ITEM CONTAINER*/
+.item-cont {
+    display: flex;
+    margin-inline: 20px;
+}
+/*SELECT FIRST ITEM CONTAINER*/
+.item-cont:nth-child(1) {
+    width: 300px;
+    height: 180px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(228, 56%, 26%);
+    border-radius: 10px 70px 10px 10px;
+    padding-right: 40px;
+    margin-bottom: 54px;
+}
+
+/*CSS FOR THE LOGO AND ICONS*/
+.logo {
+    padding-bottom: 20px;
+    margin-right: 50px;
+}
+
+.icons {
+    margin-right: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.icons div {
+    margin-inline: 5px;
+    background-color: hsl(229, 57%, 11%);
+    display: flex;
+    width: 40px;
+    height: 40px;
+    padding: 3px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.icons div img {
+    width: initial;
+    height: initial;
+}
+/*END CSS FOR LOGO AND ICONS*/
+
+
+/*SECOND ITEM CONTAINER*/
+.item-cont:nth-child(2) {
+    background-color: hsl(228, 56%, 26%);
+    width: 500px;
+    height: 120px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.info{
+    position: relative;
+    margin-left: -200px;
+    margin-top: 15px;
+}
+.info p {
+    color: hsl(229, 7%, 55%);
+    font-size: 14px;
+}
+
+.info p span {
+    color: hsl(243, 100%, 93%);
+}
+
+
+
+.glove {
+    background-color: #fff;
+    position: relative;
+    top: -90px;
+    right: -120px;
+    width: 120px;
+    height: 60px;
+    padding: 12px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.glove::before {
+    content: "";
+    position: absolute;
+    top: 44px;
+    left: 116px;
+    width: 0px;
+    height: 0px;
+    border-top: 20px solid #fff;
+    border-right: 20px solid transparent;
+    border-left: 20px solid transparent;
+    transform: rotate(80deg);
+    
+}
+
+.glove h2 {
+    color: hsl(229, 7%, 55%);
+    font-size: 12px;
+    margin: 0;
+    margin-left: 5px;
+    
+}
+
+.glove span {
+    font-weight: 700;
+    font-size: 30px;
+    color: black;
+}
+
+
+/*CHARGING BAR*/
+.bar{
+    width: 80%;
+    height: 14px;
+    position: absolute;
+    background-color: hsl(229, 57%, 11%);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+.bar span{
+    background: linear-gradient(to right, hsl(6, 100%, 80%),hsl(335, 100%, 65%));
+    width: 80%;
+    height: 70%;
+    display: block;
+    border-radius: 10px;
+}
+.bar span::before{
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    border-radius: 10px;
+    right: 82px;
+    top: 3px;
+}
+
+.number{
+    position: absolute;
+    top: 70px;
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+}
+.number span{
+    color: #fff;
+    font-size: 12px;
+}
+
+
+
+
+@media screen and (max-width:375px){
+
+    body{
+        background-image: url(../images/bg-mobile.png);
+    }
+    .container{
+        flex-direction: column;
+    }
+
+    .item-cont:nth-child(1){
+        width: 290px;
+        height: 180px;
+    }
+    .item-cont:nth-child(2){
+        width: 300px;
+        height: 120px;
+    }
+    .info{
+        top: -5px;
+        right: -100px;
+    }
+    .glove{
+        top: 40px;
+       right: 7px;
+    }
+    .glove::before{
+        display: none;
+    }
+    .bar span::before{
+        right: 51px;
+    }
+    .attribution{
+        margin-top: 60px;
+    }
+}
